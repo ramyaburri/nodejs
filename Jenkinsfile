@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        MONGO_URI  = credentials('MONGO_URL')
+        MONGO_URI  = credentials('MONGO_URI')
         JWTSECRETE = credentials('JWTSECRETE')
         EXPIRES_IN = credentials('EXPIRES_IN')
         EMAIL      = credentials('EMAIL')
