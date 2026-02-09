@@ -15,7 +15,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'master',
-                    url: 'https://github.com/ramyaburri/htmi-repo.git'
+                    url: ' https://github.com/ramyaburri/nodejs.git'
             }
         }
 
