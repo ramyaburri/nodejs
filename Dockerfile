@@ -1,9 +1,11 @@
-FROM node:24.13.0
+FROM node:18
 
- WORKDIR /app
+WORKDIR /app
 
- COPY package*.json ./
- RUN npm install
- COPY . .
- EXPOSE 5000
- CMD ["npm", "start"]
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+EXPOSE 5000
+CMD ["node", "server.js"]
