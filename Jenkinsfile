@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        MONGO_URL  = credentials('MONGO_URL')
+        MONGO_URI  = credentials('MONGO_URL')
         JWTSECRETE = credentials('JWTSECRETE')
         EXPIRES_IN = credentials('EXPIRES_IN')
         EMAIL      = credentials('EMAIL')
@@ -36,7 +36,7 @@ pipeline {
                   -p 5000:5000 \
                   --name node-backend \
                   -e PORT=$PORT \
-                  -e MONGO_URL=$MONGO_URL \
+                  -e MONGO_URI=$MONGO_URI \
                   -e JWTSECRETE=$JWTSECRETE \
                   -e EXPIRES_IN=$EXPIRES_IN \
                   -e EMAIL=$EMAIL \
